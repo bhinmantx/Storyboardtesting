@@ -173,7 +173,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <pickerView key="tableFooterView" contentMode="scaleToFill" id="Rih-EC-C7G">
-                            <rect key="frame" x="0.0" y="322" width="320" height="216"/>
+                            <rect key="frame" x="0.0" y="240" width="320" height="216"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         </pickerView>
                         <sections>
@@ -232,42 +232,7 @@
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Thumbnail" id="UAc-2R-RgV">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="80" id="pI2-Oa-VWu">
-                                        <rect key="frame" x="0.0" y="230" width="320" height="82"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="300" height="79"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="black.png" translatesAutoresizingMaskIntoConstraints="NO" id="Oi4-ue-QDf">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="75" id="5OK-hR-dpn"/>
-                                                        <constraint firstAttribute="height" constant="75" id="p7E-YK-XlM"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select A Thumbnail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V1d-Bv-nsq">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="NdY-g7-laX"/>
-                                                        <constraint firstAttribute="width" constant="135" id="PsD-JK-T3k"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="Oi4-ue-QDf" firstAttribute="top" secondItem="pI2-Oa-VWu" secondAttribute="top" constant="3" id="AVo-o9-Q2N"/>
-                                            <constraint firstItem="V1d-Bv-nsq" firstAttribute="leading" secondItem="pI2-Oa-VWu" secondAttribute="leading" constant="52" id="UIJ-jg-ihB"/>
-                                            <constraint firstItem="V1d-Bv-nsq" firstAttribute="centerY" secondItem="pI2-Oa-VWu" secondAttribute="centerY" type="default" id="e8D-XZ-bLo"/>
-                                            <constraint firstAttribute="trailing" secondItem="Oi4-ue-QDf" secondAttribute="trailing" constant="30" id="fuX-hq-NBs"/>
-                                        </constraints>
-                                        <connections>
-                                            <segue destination="1kw-GR-cFL" kind="push" identifier="PickImage" id="4Wv-XN-HMx"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
+                                <cells/>
                             </tableViewSection>
                         </sections>
                         <connections>
@@ -288,8 +253,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="ThumbNailName" destination="V1d-Bv-nsq" id="f1y-bB-pgK"/>
-                        <outlet property="Thumbnail" destination="Oi4-ue-QDf" id="inT-5i-Knr"/>
                         <outlet property="descriptionField" destination="BUy-nW-fz4" id="Mzn-uC-qFQ"/>
                         <outlet property="nameTextField" destination="fJn-qk-ISw" id="n3O-gN-Bls"/>
                         <outlet property="thumbnailPicker" destination="Rih-EC-C7G" id="EIY-TQ-1xw"/>
@@ -304,7 +267,7 @@
             <objects>
                 <tableViewController id="1kw-GR-cFL" customClass="GamePickerViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="dls-f9-Zn2">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -388,48 +351,7 @@
     </scenes>
     <resources>
         <image name="Black star white Logo.png" width="183" height="183"/>
-        <image name="black.png" width="20" height="50"/>
     </resources>
-    <classes>
-        <class className="AddDrinkController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddDrinkController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:"/>
-                <relationship kind="action" name="done:"/>
-                <relationship kind="outlet" name="ThumbNailName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="Thumbnail" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="descriptionField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="gameNameField" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="thumbnailPicker" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="thumbnailPickerFilename" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="DrinkCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DrinkCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="description" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="drinkname" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="thumbnail" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="DrinkViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DrinkViewController.h"/>
-        </class>
-        <class className="GamePickerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GamePickerViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="TutorialDrinkDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TutorialDrinkDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="DrinkDescription" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="DrinkName" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

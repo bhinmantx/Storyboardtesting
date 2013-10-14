@@ -39,16 +39,7 @@
              @"black.png",
              @"orange.png",nil];
              
-    /*
-	games = [NSArray arrayWithObjects:
-             @"Angry Birds",
-             @"Chess",
-             @"Russian Roulette",
-             @"Spin the Bottle",
-             @"Texas Hold’em Poker",
-             @"Tic-Tac-Toe",
-             nil];
-    */
+
     selectedIndex = [games indexOfObject:self.game];
 
     // Uncomment the following line to preserve selection between presentations.

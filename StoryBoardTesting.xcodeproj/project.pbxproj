@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C632EDB8180C99D900112E07 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C632EDB7180C99D900112E07 /* .gitignore */; };
 		C6471B771805D90C00812420 /* AddDrinkController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6471B761805D90C00812420 /* AddDrinkController.m */; };
 		C67388101805FC72009BF60A /* GamePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C673880F1805FC72009BF60A /* GamePickerViewController.m */; };
 		C673881318060FAE009BF60A /* TutorialDrinkDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C673881218060FAE009BF60A /* TutorialDrinkDetailViewController.m */; };
@@ -29,13 +28,11 @@
 		C6A4B0251802BD140016D39E /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A4B0241802BD140016D39E /* TutorialViewController.m */; };
 		C6B47FBE1805B976009547C0 /* DrinkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B47FBD1805B976009547C0 /* DrinkCell.m */; };
 		C6B47FC01805C1EB009547C0 /* orange.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B47FBF1805C1EB009547C0 /* orange.png */; };
-		C6BB14F8180318C000184532 /* Black star white Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C6BB14F7180318C000184532 /* Black star white Logo.png */; };
 		C6BB14FE18031FDF00184532 /* Drink.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB14FD18031FDF00184532 /* Drink.m */; };
 		C6BB15011803237300184532 /* DrinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB15001803237300184532 /* DrinkViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C632EDB7180C99D900112E07 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = .git/.gitignore; sourceTree = "<group>"; };
 		C6471B751805D90C00812420 /* AddDrinkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDrinkController.h; sourceTree = "<group>"; };
 		C6471B761805D90C00812420 /* AddDrinkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDrinkController.m; sourceTree = "<group>"; };
 		C673880E1805FC72009BF60A /* GamePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePickerViewController.h; sourceTree = "<group>"; };
@@ -66,7 +63,6 @@
 		C6B47FBC1805B976009547C0 /* DrinkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkCell.h; sourceTree = "<group>"; };
 		C6B47FBD1805B976009547C0 /* DrinkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkCell.m; sourceTree = "<group>"; };
 		C6B47FBF1805C1EB009547C0 /* orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange.png; sourceTree = "<group>"; };
-		C6BB14F7180318C000184532 /* Black star white Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Black star white Logo.png"; sourceTree = "<group>"; };
 		C6BB14FC18031FDF00184532 /* Drink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drink.h; sourceTree = "<group>"; };
 		C6BB14FD18031FDF00184532 /* Drink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drink.m; sourceTree = "<group>"; };
 		C6BB14FF1803237300184532 /* DrinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrinkViewController.h; path = ../DrinkViewController.h; sourceTree = "<group>"; };
@@ -103,7 +99,6 @@
 		C6A4AFFC1802BD140016D39E = {
 			isa = PBXGroup;
 			children = (
-				C632EDB7180C99D900112E07 /* .gitignore */,
 				C673881C18070CC4009BF60A /* Add Drink Controllers */,
 				C6A4B00E1802BD140016D39E /* StoryBoardTesting */,
 				C6A4B0071802BD140016D39E /* Frameworks */,
@@ -134,7 +129,6 @@
 			children = (
 				C6BB14FF1803237300184532 /* DrinkViewController.h */,
 				C6BB15001803237300184532 /* DrinkViewController.m */,
-				C6BB14F7180318C000184532 /* Black star white Logo.png */,
 				C6A4B0171802BD140016D39E /* TutorialAppDelegate.h */,
 				C6A4B0181802BD140016D39E /* TutorialAppDelegate.m */,
 				C6A4B0201802BD140016D39E /* MainStoryboard.storyboard */,
@@ -227,14 +221,12 @@
 				C6A4B01D1802BD140016D39E /* Default@2x.png in Resources */,
 				C6A4B01F1802BD140016D39E /* Default-568h@2x.png in Resources */,
 				C6A4B0221802BD140016D39E /* MainStoryboard.storyboard in Resources */,
-				C6BB14F8180318C000184532 /* Black star white Logo.png in Resources */,
 				C6B47FC01805C1EB009547C0 /* orange.png in Resources */,
 				C673881718061D28009BF60A /* amber.png in Resources */,
 				C673881818061D28009BF60A /* gold.png in Resources */,
 				C673881918061D28009BF60A /* black.png in Resources */,
 				C673881B180635B8009BF60A /* sharkIcon.png in Resources */,
 				C69EB32B1808773A007D4BF7 /* ThumbPickerCell.xib in Resources */,
-				C632EDB8180C99D900112E07 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

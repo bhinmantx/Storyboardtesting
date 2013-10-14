@@ -67,34 +67,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    
-//    static NSString *CellIdentifier = @"DrinkCell";
- //   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
- //Newer code
-    /*
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DrinkCell"];
-    Drink *drink = [self.drinks objectAtIndex:indexPath.row];
-    cell.textLabel.text = drink.name;
-    cell.detailTextLabel.text = drink.description;
-   */
-   
-    
-    ////The below code is from tags
-    /*
-    UITableViewCell *cell = [tableView
-                             dequeueReusableCellWithIdentifier:@"DrinkCell"];
-	Drink *drink = [self.drinks objectAtIndex:indexPath.row];
-	UILabel *nameLabel = (UILabel *)[cell viewWithTag:100];
-	nameLabel.text = drink.name;
-	UILabel *drinkLabel = (UILabel *)[cell viewWithTag:101];
-	drinkLabel.text = drink.description;
-	UIImageView * ratingImageView = (UIImageView *)
-    [cell viewWithTag:102];
-	//ratingImageView.image = [self imageForRating:player.rating];
- */
-    
-   
+
     DrinkCell *cell = (DrinkCell *)[tableView dequeueReusableCellWithIdentifier:@"DrinkCell"];
     Drink *drink = [self.drinks objectAtIndex:indexPath.row];
     cell.drinkname.text = drink.name;
@@ -122,6 +95,11 @@
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    /**
+     This is the fix from stack overflow that allows for the resize or "slide" of view contents when 
+     the delete key appears in the "slide to delete"
+     */
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
         [self.drinks removeObjectAtIndex:indexPath.row];

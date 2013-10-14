@@ -39,6 +39,9 @@
 {
     [super viewDidLoad];
     
+    
+    //Setup the UIPicker protocols etc
+    
     _thumbNailPicker.delegate = self;
     _thumbNailPicker.dataSource = self;
     
@@ -200,15 +203,12 @@
 
 #pragma mark - PickerView Delegate
 
+/**
+ This is an experiment to support: a new view using only storyboard builder and no specific controller
+ */
 
 -(UIView*)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
  
-
-  /*  CGRect cellFrame = CGRectMake(0.0, 0.0, 110.0, 32.0);
-    UIView *newView = [[UIView alloc] initWithFrame:cellFrame];
-    newView.backgroundColor = [UIColor colorWithRed:1.0 green:0.0 blue:1.0 alpha:1.0];
-    return newView;
-    */
 
     NSArray * nibs = [[NSBundle mainBundle] loadNibNamed:@"ThumbPickerCell" owner:self options:nil];
   
@@ -217,17 +217,10 @@
     UIView *newView = [nibs objectAtIndex:0];
  
     UIImageView *thumb = (UIImageView*)[newView viewWithTag:50];
-/*
-    NSLog(@"%@ Nibs's count %x", @"This fired", nibs.count);
-
-    if(row == 0)
-    thumb.image = [UIImage imageNamed:@"gold.png"];
-    else
-        thumb.image = [UIImage imageNamed:@"amber.png"];
+    UILabel *filename = (UILabel*)[newView viewWithTag:250];
     
-    //view = newView;
-  
- */
+
+    filename.text = [_thumbNailNames objectAtIndex:row];
     thumb.image = [UIImage imageNamed:[_thumbNailNames objectAtIndex:row]];
  return newView;
 
